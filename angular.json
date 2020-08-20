@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tips-angular"
+    }
+  },
+  "defaultProject": "tips-angular",
+  "cli": {
+    "analytics": false
+  }
 }

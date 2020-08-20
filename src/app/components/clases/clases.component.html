@@ -1,0 +1,38 @@
+
+<h3>NgClass y sus usos</h3>
+<br>
+
+<div  [ngClass]="alerta" class="alert" role="alert">
+  A simple primary alert—check it out!
+</div>
+
+<button (click)="alerta = 'btn-success'" class="btn btn-success m-1">Success</button>
+<button (click)="alerta = 'btn-warning'" class="btn btn-warning">Warning</button>
+
+<hr>
+<br>
+
+<h3 [ngClass]="{  'text-danger' :  propiedades['danger'],
+                  'text-info'   : !propiedades['danger'] }">Hola Mundo</h3>
+
+
+<button  (click)="propiedades['danger'] = !propiedades['danger'] "
+[ngClass]="{ 'btn-danger': propiedades['danger'], 'btn-info': !propiedades['danger'] }"
+class="btn ">
+  Cambiar texto
+</button>
+
+<hr>
+<br>
+
+<h3>Proceso asincrono</h3>
+<hr>
+
+<button class="btn btn-primary"  (click)="ejecutar()" [disabled]="loading">
+
+  <i [ngClass]="{ 'fa-save': !loading, 'fa-sync fa-spin': loading }"
+  class="fa fa-save"></i>
+  <span *ngIf="!loading"> Guardar cambios</span>
+  <span *ngIf="loading"> Espere ...</span>
+
+</button>

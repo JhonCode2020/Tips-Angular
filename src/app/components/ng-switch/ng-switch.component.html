@@ -1,0 +1,30 @@
+
+<h3>Ng Switch</h3>
+<br>
+
+<button (click)="alerta = 'success'"
+class="btn btn-success m-2">Cambiar</button>
+
+<button (click)="alerta = 'danger'"
+class="btn btn-danger m-2">Cambiar</button>
+
+<button (click)="alerta = 'warning'"
+class="btn btn-warning m-2">Cambiar</button>
+
+
+<div  [ngSwitch]="alerta">
+
+  <div class="alert alert-success" *ngSwitchCase="'success'" role="alert">
+    A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  </div>
+  <div class="alert alert-danger" *ngSwitchCase="'danger'" role="alert">
+    A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  </div>
+  <div class="alert alert-warning"  *ngSwitchCase="'warning'" role="alert">
+    A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  </div>
+  <div class="alert alert-info"  *ngSwitchDefault role="info">
+    A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  </div>
+
+</div>
